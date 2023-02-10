@@ -2,5 +2,5 @@
 
 About me guessing game
 
-![accessability score](/img/lighthouse.png "lighthouse screenshot")
+<img src ="img/lighthouse.png">
 
