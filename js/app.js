@@ -135,6 +135,8 @@ while (attempts > 0) {
   }
 }
 
+let 
+
 // make a loop that gives the user up to 4 guesses to
 // guess correct answer which is called guess number
 
