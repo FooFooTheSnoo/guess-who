@@ -95,7 +95,7 @@ fifthQuestion();
 let attempt = 3;
 let guessNumber = 5;
 let userGuess = prompt(
-  "I bet you cant guess what number I'm thinking of between 1-10"
+  'I bet you cant guess what number I\'m thinking of between 1-10'
 );
 userGuess = Number(userGuess);
 while (attempt > 0)
@@ -129,7 +129,7 @@ if (!attempt) {
 // console.log(userguess, currentplace)
 
 let userAttempts = 6;
-let myAnswers = ['germany', 'japan', 'switzerland', 'spain', 'france', 'china'];
+let myAnswers = ['germany', 'japan', 'switzerland', 'spain', 'france', 'china', 'prussia'];
 //while loop controls the game
 while (userAttempts > 0) {
   let userResponse = prompt(
@@ -137,15 +137,18 @@ while (userAttempts > 0) {
   );
   userAttempts--;
 
+  let answeredCorrectly = false;
   for (let i = 0; i < myAnswers.length; i++) {
     if (myAnswers[i] === userResponse) {
       alert('Yes! Definitely on my list of places to go!');
-      userAttempts = 0;
+      answeredCorrectly = true;
+      // userAttempts = 0;
       score++;
       break;
     }
   }
-  if (!userAttempts) {
+
+  if (userAttempts === 0 && answeredCorrectly === false) {
     alert(
       'You have run out of tries! I would like to go to Germany, Japan, France, and Switzerland'
     );
