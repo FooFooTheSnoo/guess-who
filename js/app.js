@@ -126,3 +126,4 @@ while (userAttempts > 0) {
   }
 }
 user();
+//js works
