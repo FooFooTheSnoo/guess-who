@@ -49,30 +49,37 @@ questions(
   "Of course he likes pizza!"
 );
 
-// let attempt = 3;
-// let guessNumber = 5;
-// let userGuess = prompt(
-//   "I bet you cant guess what number I'm thinking of between 1-10"
-// );
-// userGuess = Number(userGuess);
-// while (attempt > 0)
-//   if (userGuess < guessNumber) {
-//     userGuess = prompt("Thats a little low! Try again!");
-//     userGuess = Number(userGuess);
-//   } else if (userGuess > guessNumber) {
-//     userGuess = prompt("Thats a little too High! Try again!");
-//     userGuess = Number(userGuess);
-//   } else if (userGuess === guessNumber) {
-//     alert("Thats correct! Nice job!");
-//     score++;
-//     break;
-//   }
-// attempt = attempt - 1;
-// if (!attempt) {
-//   alert("You have run out of guesses!");
-// }
+function guessANumber(question, lowNumber, highNumber, correctNumber) {
+  let takeAGuess = prompt(question);
+  let attempt = 2;
+  while (attempt > 0) {
+    if (takeAGuess < 5) {
+      alert(lowNumber);
+      takeAGuess = prompt(question);
+      attempt--;
+      console.log(takeAGuess + " Too low");
+    } else if (takeAGuess > 5) {
+      alert(highNumber);
+      takeAGuess = prompt(question);
+      alert(highNumber);
+      attempt--;
+    } else {
+      alert(correctNumber);
+      break;
+    }
+  }
 
-// }
+  if (attempt === 0) {
+    alert("You have run out of guesses!");
+  }
+}
+guessANumber(
+  "I bet you cant guess what number I'm thinking of between 1-10",
+  "Thats a little low! Try again!",
+  "Thats a little too High! Try again!",
+  "Thats correct! Nice job!"
+);
+
 // make a loop that gives the user up to 4 guesses to
 // guess correct answer which is called guess number
 
