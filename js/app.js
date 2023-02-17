@@ -90,41 +90,38 @@ guessANumber(
 // ensure to decrement every attempt
 // alert user if out of guesses
 
-// console.log(userguess, currentplace)
+let userAttempts = 6;
+let myAnswers = [
+  "germany",
+  "japan",
+  "switzerland",
+  "spain",
+  "france",
+  "china",
+  "prussia",
+];
+// while loop controls the game
+while (userAttempts > 0) {
+  let userResponse = prompt(
+    `Guess one coutries I would like to go visit. ${userAttempts} tries!`
+  );
+  userAttempts--;
 
-// let userAttempts = 6;
-// let myAnswers = [
-//   "germany",
-//   "japan",
-//   "switzerland",
-//   "spain",
-//   "france",
-//   "china",
-//   "prussia",
+  let answeredCorrectly = false;
+  for (let i = 0; i < myAnswers.length; i++) {
+    if (myAnswers[i] === userResponse) {
+      alert("Yes! Definitely on my list of places to go!");
+      answeredCorrectly = true;
+      // userAttempts = 0;
+      score++;
+      break;
+    }
+  }
 
-// ];
-//while loop controls the game
-// while (userAttempts > 0) {
-//   let userResponse = prompt(
-//     `Guess one coutries I would like to go visit. ${userAttempts} tries!`
-//   );
-//   userAttempts--;
-
-//   let answeredCorrectly = false;
-//   for (let i = 0; i < myAnswers.length; i++) {
-//     if (myAnswers[i] === userResponse) {
-//       alert("Yes! Definitely on my list of places to go!");
-//       answeredCorrectly = true;
-//       // userAttempts = 0;
-//       score++;
-//       break;
-//     }
-//   }
-
-//   if (userAttempts === 0 && answeredCorrectly === false) {
-//     alert(
-//       "You have run out of tries! I would like to go to Germany, Japan, France, and Switzerland"
-//     );
-//   }
-// }
-//user();
+  if (userAttempts === 0 && answeredCorrectly === false) {
+    alert(
+      "You have run out of tries! I would like to go to Germany, Japan, France, and Switzerland"
+    );
+  }
+}
+user();
