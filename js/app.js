@@ -1,4 +1,5 @@
 "use strict";
+
 let score = 0;
 
 function user() {
