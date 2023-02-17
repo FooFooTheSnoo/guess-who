@@ -18,3 +18,5 @@ Joshua Hahn
 <img src ="img/lighthouse.png">
 
 ### Reflections and Comments
+
+#### The owner is [Joshua Hahn](https://github.com/FooFooTheSnoo/guess-who)the driver and the navigator is[Julio Ramirez](https://github.com/rzvdev1/guess-who)
